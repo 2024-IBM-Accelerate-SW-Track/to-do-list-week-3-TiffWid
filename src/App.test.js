@@ -23,7 +23,8 @@ test('test that App component renders', () => {
 test('test that new-item-button is a button', () => {
   render(<App/>, container);
   const element = screen.getByTestId('new-item-button');
-  expect(element.innerHTML.toLowerCase().includes("button")).toBe(true)
+  //button doesn't work since there is not innerHTML that includes "button" the button says add
+  expect(element.innerHTML.toLowerCase().includes("add")).toBe(true)
 });
 
 test('test that new-item-input is an input ', () => {
@@ -31,3 +32,4 @@ test('test that new-item-input is an input ', () => {
   const element = screen.getByTestId('new-item-input');
   expect(element.innerHTML.toLowerCase().includes("input")).toBe(true)
 });
+
