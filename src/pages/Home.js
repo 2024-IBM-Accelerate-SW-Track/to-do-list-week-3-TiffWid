@@ -31,7 +31,7 @@ class Home extends Component {
     const exists = this.state.todos.find(t => t.content === todo.content);
 
     if (todo.due === null|| todo.due === "Invalid Date") {
-      return;
+      return
     }
 
     if (exists){ return }
